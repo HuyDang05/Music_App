@@ -18,7 +18,8 @@
   "homepage": "https://github.com/HuyDang05/Music_App#readme",
   "description": "",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "pug": "^3.0.3"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
