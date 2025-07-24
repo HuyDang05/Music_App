@@ -30,3 +30,31 @@ if (aplayer) {
   })
 }
 // End APlayer
+
+// Button Like
+const buttonLike = document.querySelector("[button-like]");
+if (buttonLike) {
+  buttonLike.addEventListener("click", () => {
+    const idSong = buttonLike.getAttribute("button-like");
+    const isActive = buttonLike.classList.contains("active");
+     
+    const typeLike = isActive ? "dislike" : "like";
+
+    const option = {
+      method:  "PATCH"
+    }
+
+    const link = `/songs/like/${typeLike}/${idSong}`;
+
+    fetch(link, option)
+      .then(res => res.json())
+      .then(data => {
+        const span = buttonLike.querySelector("span");
+        span.innerHTML = `${data.like} thích`;
+
+        buttonLike.classList.toggle("active");
+      });
+  });
+};
+// End Button Like
+
