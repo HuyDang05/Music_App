@@ -6,7 +6,7 @@ if (aplayer) {
   dataSong = JSON.parse(dataSong);
 
   let dataSinger = aplayer.getAttribute("data-singer");
-  dataSong = JSON.parse(dataSinger);
+  dataSinger = JSON.parse(dataSinger);
 
   const ap = new APlayer({
     container: aplayer,
