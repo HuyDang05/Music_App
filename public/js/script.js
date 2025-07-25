@@ -27,6 +27,21 @@ if (aplayer) {
 
   ap.on('pause', function () {
     avatar.computedStyleMap.animationPlayState = "paused";
+  });
+
+  ap.on('ended', function () {
+    const option = {
+      method:  "PATCH"
+    }
+
+    const link = `/songs/listen/${dataSong._id}`;
+
+    fetch(link, option)
+      .then(res => res.json())
+      .then(data => {
+        const elementListenSpan = document.querySelector(".singer-detail .inner-listen span");
+        elementListenSpan.innerHTML = `${data.listen} lượt nghe`;
+      })
   })
 }
 // End APlayer
