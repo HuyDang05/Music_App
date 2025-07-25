@@ -40,8 +40,6 @@ export const list = async (req: Request, res: Response) => {
 export const detail = async (req: Request, res: Response) => {  
   const slugSong: string = req.params.slugSong;
 
-  console.log(slugSong);
-
   const song = await Song.findOne({
     slug: slugSong,
     status: "active",
