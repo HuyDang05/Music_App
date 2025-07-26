@@ -1,6 +1,5 @@
 extends ../../layouts/default.pug
 
-
 block main
   h1(class="mb-4") #{pageTitle}
 
@@ -13,7 +12,7 @@ block main
 
         .col-4.text-right 
           a(
-            href=`${prefixAdmin}/topics/create`
+            href=`${prefixAdmin}/songs/create`
             class="btn btn-outline-success"
           ) + Thêm mới 
 
@@ -25,11 +24,14 @@ block main
             th STT 
             th Hình ảnh 
             th Tiêu đề
+            //- th Ca si
+            //- Chu de
+            //- Vi tri
             th Trạng thái
             th Hành động
 
         tbody 
-          each item, index in topics 
+          each item, index in songs 
             tr 
               td #{index+1}             
               td 
@@ -53,11 +55,11 @@ block main
                   )  Dừng hoạt động
               td 
                 a(
-                  href=`${prefixAdmin}/topics/detail/${item.id}`
+                  href=`${prefixAdmin}/songs/detail/${item.id}`
                   class="btn btn-secondary btn-sm"
                   ) Chi tiết                  
                 a(
-                  href=`${prefixAdmin}/topics/edit/${item.id}`
+                  href=`${prefixAdmin}/songs/edit/${item.id}`
                   class="btn btn-warning btn-sm"
                 ) Sửa
                 button(
