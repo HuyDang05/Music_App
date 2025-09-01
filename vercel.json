@@ -7,14 +7,12 @@
       "config": { "includeFiles": ["dist/**"]}
     }
   ],
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/topics",
-      "permanent": true
-    }
-  ],
   "routes":[
+    {
+      "src": "/",
+      "status": 308,
+      "headers": { "Location": "/topics" }
+    },
     {         
       "src": "/(.*)",
       "dest": "dist/index.js"
