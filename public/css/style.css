@@ -43,7 +43,7 @@
     margin-bottom: 0;
     font-size: 28px;
     font-weight: 600;
-    color: green;
+    color: black;
 }
 
 /* End box-head */
@@ -326,6 +326,26 @@
 }
 
 /* End box-search */
+
+.card {
+  width: 100%; 
+  max-width: 400px;   
+  margin: 0 auto;     
+}
+
+.card img {
+  height: 330px;
+  object-fit: cover;
+}
+
+img.logo {
+  background-color: white; 
+  padding: 5px;
+  border-radius: 8px;
+}
+
+
+
 
 
 
